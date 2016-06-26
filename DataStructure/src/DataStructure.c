@@ -17,6 +17,10 @@
 #include "queue/ListQueue.h"
 #include "deque/DoubleLinkedList.h"
 
+#include "stack/MazeArrayStack.h"
+#include "queue/MazeQueue.h"
+
+
 void ArrayStackTest() {
 	printf("----- array stack\n");
 
@@ -148,6 +152,10 @@ int main(void) {
 	ListQueueTest();
 
 	dllDequeTest();
+
+	solveMazeByStack();
+	solveMazeByQueue();
+
 
 	return EXIT_SUCCESS;
 }
