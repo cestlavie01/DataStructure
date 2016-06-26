@@ -8,7 +8,11 @@
 #ifndef SRC_STACK_ARRAYSTACK_H_
 #define SRC_STACK_ARRAYSTACK_H_
 
-#define STACK_LEN 100;
+#define STACK_LEN 100
+#define TOP_INDEX_EMTPY -1
+
+#define TRUE 1
+#define FALSE 0
 
 typedef int Data;
 
@@ -17,13 +21,11 @@ typedef struct _arrayStack {
 	int topIndex;
 } ArrayStack;
 
-typedef ArrayStack Stack;
+void initArrayStack(ArrayStack *pStack);
+int isEmptyArrayStack(ArrayStack *pStack);
 
-void stackInit(Stack *pStack);
-int isEmptyStack(Stack *pStack);
-
-void pushStack(Stack *pStack, Data data);
-Data popStack(Stack *pStack);
-Data peekStack(Stack *pStack);
+void pushArrayStack(ArrayStack *pStack, Data data);
+Data popArrayStack(ArrayStack *pStack);
+Data peekArrayStack(ArrayStack *pStack);
 
 #endif /* SRC_STACK_ARRAYSTACK_H_ */
